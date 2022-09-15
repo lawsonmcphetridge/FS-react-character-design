@@ -1,9 +1,12 @@
 .head{
-max-height: ;
+max-height: 300px;
+max-width: 300px;
 }
 .body{
-
+max-height: 300px;
+max-width: 300px;
 }
 .shoes{
-
+max-height: 300px;
+max-width: 300px;
 }

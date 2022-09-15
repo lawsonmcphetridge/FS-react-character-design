@@ -6,6 +6,7 @@ export default function Slogan({ slogans }) {
       {slogans.map((slogan) => (
         <p key={slogan}>{slogan}</p>
       ))}   
+          
     </div>
   );
 }
