@@ -1,7 +1,11 @@
 import React from 'react';
-
-export default function Character() {
+import './Character.css';
+export default function Character({ head, body, shoes }) {
   return (
-    <div>Character</div>
+    <div>
+      <img className="head" src={`${process.env.PUBLIC_URL}/body-parts/${head}.png`} />
+      <img className="body" src={`${process.env.PUBLIC_URL}/body-parts/${body}.png`} />
+      <img className="shoes" src={`${process.env.PUBLIC_URL}/body-parts/${shoes}.png`} />
+    </div>
   );
 }

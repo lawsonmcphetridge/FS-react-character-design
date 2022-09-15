@@ -1,7 +1,11 @@
 import React from 'react';
-
-export default function Slogan() {
+import './Slogan.css';
+export default function Slogan({ slogans }) {
   return (
-    <div>Slogan</div>
+    <div className="slogans">
+      {slogans.map((slogan) => (
+        <p key={slogan}>{slogan}</p>
+      ))}   
+    </div>
   );
 }
