@@ -1,12 +1,26 @@
 .head{
-max-height: 300px;
-max-width: 300px;
+    position: absolute;
+    top: 0;
+    left: 44%;
+max-height: 100px;
+max-width: 100px;
 }
 .body{
-max-height: 300px;
-max-width: 300px;
+    top: 17%;
+    left: 40%;
+    position: absolute;
+max-height: 200px;
+max-width: 200px;
 }
 .shoes{
-max-height: 300px;
-max-width: 300px;
+    position: absolute;
+max-height: 100px;
+max-width: 100px;
+bottom: 25%;
+left: 45%;
 }
+.character {
+    height: 30rem;
+    position: relative;
+}
+

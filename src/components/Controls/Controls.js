@@ -1,46 +1,55 @@
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import React from 'react';
 import './Controls.css';
 
-export default function Controls({ head, body, shoes, setHead, setBody, setShoes, handleIncrement, slogan, newSlogan }) {
+export default function Controls({ head, body, shoes, setHead, setBody, setShoes, handleIncrement, slogan, newSlogan, addSlogan }) {
   return (
-    <div>
+    <div className="controls">
           
-      <div className="form-select-head">
-        <select value={head} onChange={(e) => {
+      <div className="select-container">
+              
+        <Select className="select" value={head} onChange={(e) => {
           setHead(e.target.value);
           handleIncrement('head');
         }} >
                   
-          <option value="mr-krabs-head">mr-krabs-head</option>
-          <option value="patrick-head">patrick-head</option>
-          <option value="sponge-bob-head">sponge-bob-head</option>
-        </select>
-      </div>
-      
-      <div className="form-select-body">
-        <select value={body} onChange={(e) => {
+          <MenuItem value="mr-krabs-head">mr krabs</MenuItem>
+          <MenuItem value="patrick-head">patrick</MenuItem>
+          <MenuItem value="sponge-bob-head">sponge bob</MenuItem>
+        </Select>
+              
+        <Select className="select" value={body} onChange={(e) => {
           setBody(e.target.value);
           handleIncrement('body');
         }} >
-          <option value="spongebob-shirt">spongebob-shirt</option>
-          <option value="squidward-shirt">squidward-shirt</option>
-          <option value="pizza-shirt">pizza-shirt</option>
-        </select>
-      </div>
+          <MenuItem value="spongebob-shirt">spongebob-shirt</MenuItem>
+          <MenuItem value="squidward-shirt">squidward-shirt</MenuItem>
+          <MenuItem value="pizza-shirt">pizza-shirt</MenuItem>
+        </Select>
+     
 
-      <div className="form-select-shoes">
-        <select value={shoes} onChange={(e) => {
+    
+        <Select className="select" value={shoes} onChange={(e) => {
           setShoes(e.target.value);
           handleIncrement('shoes');
         }} >
-          <option value="shoes-1">clown-shoes-1</option>
-          <option value="shoes-2">clown-shoes-2</option>
-          <option value="shoes-3">clown-shoes-3</option>
-        </select>
-      </div>    
+          <MenuItem value="clown-shoes-1">shoes-1</MenuItem>
+          <MenuItem value="clown-shoes-2">shoes-2</MenuItem>
+          <MenuItem value="clown-shoes-3">shoes-3</MenuItem>
+        </Select>
+      </div>
+      
+     
+        
 
-      <input value={slogan} onChange={(e) => newSlogan(e.target.value)}></input>
+      <TextField label="Add Slogan" variant="outlined" value={slogan} onChange={(e) => newSlogan(e.target.value)}></TextField>
+      <Button class="button" variant="outlined" onClick={() => addSlogan()}> <AddCircleIcon /> </Button>
           
     </div>
+      
   );
 }

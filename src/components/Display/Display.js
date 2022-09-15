@@ -7,11 +7,12 @@ import './Display.css';
 export default function Display() {
   const [head, setHead] = useState('mr-krabs-head');
   const [body, setBody] = useState('spongebob-shirt');
-  const [shoes, setShoes] = useState('shoes-1');
+  const [shoes, setShoes] = useState('clown-shoes-1');
   const [headCount, headCountChanged] = useState(0);
   const [bodyCount, bodyCountChanged] = useState(0);
   const [shoesCount, shoesCountChanged] = useState(0);
-  const [slogan, newSlogan] = useState('...rest');
+  const [slogan, newSlogan] = useState('');
+  const [sloganArr, setSloganArr] = useState([]); 
     
  
   const handleIncrement = (bodyPart) => {
@@ -22,15 +23,42 @@ export default function Display() {
     } else if (bodyPart === 'shoes') {
       shoesCountChanged((prevState) => prevState + 1);
     }
-      
   };
+    
+  const addSlogan = () => {
+    setSloganArr(prevSlogans => [...prevSlogans, slogan]);     
+    newSlogan('');  
+  };
+  const changedCount = `you have changed the head ${headCount} times, you have changed the body ${bodyCount}times, and the legs ${shoesCount} times`;
+    
 
+    
   return (
     <div className="characterPreview">
-      <Character head={head} body={body} shoes={shoes} />
-      <Controls handleIncrement={handleIncrement} head={head} body={body} shoes={shoes} setHead={setHead} setBody={setBody} setShoes={setShoes} />
-      {/* <Slogan slogan={slogan} newSlogan={newSlogan} />     */}
-      <div>{`you have changed the head ${headCount} times, you have changed the body ${bodyCount}times, and the legs ${shoesCount} times`}</div>  
+          
+      <Character
+        head={head}
+        body={body}
+        shoes={shoes}
+      />
+          
+      <Controls
+        slogan={slogan}
+        handleIncrement={handleIncrement}
+        head={head}
+        body={body}
+        shoes={shoes}
+        setHead={setHead}
+        setBody={setBody}
+        setShoes={setShoes}
+        addSlogan={addSlogan}
+        newSlogan={newSlogan}
+      />
+          
+          
+      <div className='changed-count'>{changedCount}</div>  
+          
+      <Slogan sloganArr={sloganArr} />
     </div>
   );
 }

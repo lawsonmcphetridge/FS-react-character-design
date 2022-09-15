@@ -1,12 +1,14 @@
 import React from 'react';
 import './Slogan.css';
-export default function Slogan({ slogans }) {
+
+export default function Slogan({ sloganArr }) {
+  const sloganItems = sloganArr.map((slogan, i) => (
+    <p key={i}>{slogan}</p>
+  ));
+    
   return (
     <div className="slogans">
-      {slogans.map((slogan) => (
-        <p key={slogan}>{slogan}</p>
-      ))}   
-          
+      {sloganItems}       
     </div>
   );
 }
