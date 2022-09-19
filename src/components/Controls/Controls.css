@@ -1,0 +1,21 @@
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+height: 3.5rem;
+width: 4rem;
+margin: 0rem 0.5rem;
+}
+
+.select {
+    margin: 0.5rem;
+}
+
+.controls {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+}

@@ -1,5 +1,15 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background-image: url(./assets/background.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {
