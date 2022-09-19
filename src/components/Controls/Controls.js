@@ -29,8 +29,8 @@ export default function Controls({ head, body, shoes, setHead, setBody, setShoes
           <MenuItem value="spongebob-shirt">spongebob-shirt</MenuItem>
           <MenuItem value="squidward-shirt">squidward-shirt</MenuItem>
           <MenuItem value="pizza-shirt">pizza-shirt</MenuItem>
-        </Select>
-     
+        </Select>  
+      
 
     
         <Select className="select" value={shoes} onChange={(e) => {
@@ -40,12 +40,12 @@ export default function Controls({ head, body, shoes, setHead, setBody, setShoes
           <MenuItem value="clown-shoes-1">shoes-1</MenuItem>
           <MenuItem value="clown-shoes-2">shoes-2</MenuItem>
           <MenuItem value="clown-shoes-3">shoes-3</MenuItem>
-        </Select>
+        </Select> 
       </div>
       
-     
+      
         
-
+ 
       <TextField label="Add Slogan" variant="outlined" value={slogan} onChange={(e) => newSlogan(e.target.value)}></TextField>
       <Button class="button" variant="outlined" onClick={() => addSlogan()}> <AddCircleIcon /> </Button>
           

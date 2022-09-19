@@ -29,6 +29,7 @@ export default function Display() {
     setSloganArr(prevSlogans => [...prevSlogans, slogan]);     
     newSlogan('');  
   };
+  
   const changedCount = `you have changed the head ${headCount} times, you have changed the body ${bodyCount}times, and the legs ${shoesCount} times`;
     
 
